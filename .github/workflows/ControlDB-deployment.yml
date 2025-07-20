@@ -12,9 +12,7 @@ jobs:
           uses: Azure/login@v1
           with:
            allow-no-subscriptions: true
-           # creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
            creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}"}'
-        - name: Build and Deploy SQL Database
         - name: Build and Deploy SQL Database
           uses: Azure/sql-action@v2
           with:
